@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import AnimatedBall from "@/components/ui/gradient";
 
@@ -36,13 +36,12 @@ export default function Top() {
 
   return (
     <div className="w-screen h-[90vw]">
-        <AnimatedBall />
+      <AnimatedBall />
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }} // Adjust the duration as needed
-
       >
         <div className="flex flex-col items-center justify-center h-[40rem] text-center ">
           <div className="text-7xl font-bold text-gray-800 dark:text-white z-20 text-center">
@@ -56,7 +55,7 @@ export default function Top() {
           </div>
         </div>
         <div className="w-screen flex justify-center">
-            <ScrollArrow />
+          <ScrollArrow />
         </div>
       </motion.div>
     </div>
