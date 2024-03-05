@@ -13,6 +13,8 @@
     -webkit-filter: blur(40px);
 
     z-index: 1;
+    margin-left: 74vw;
+    margin-top: 45vh;
 }
   
   @keyframes rotate {

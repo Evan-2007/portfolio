@@ -11,7 +11,7 @@ export default function ScrollArrow() {
           <ChevronDown size={160} strokeWidth={0.5} />
         </div>
         <div className={styles.fade}>
-          <ChevronDown size={160} strokeWidth={0.5} />
+          <ChevronDown size={160} strokeWidth={0.5} />  
         </div>
       </div>
     </div>

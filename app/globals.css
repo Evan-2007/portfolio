@@ -11,6 +11,7 @@
   position: absolute;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
 }
 
 :root::--webkit-scrollbar {
@@ -24,6 +25,12 @@
   }
 }
 
+html, body, :root {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,4 +39,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+
 }
