@@ -6,7 +6,7 @@ import Top from "@/components/ui/top";
 
 export default function DotBackgroundDemo() {
   return (
-    <div>
+    <div className="absolute">
       <Top />
     </div>
   );

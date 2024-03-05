@@ -35,7 +35,7 @@ export default function Top() {
   ];
 
   return (
-    <div className="w-screen h-[90vw]">
+    <div className="w-screen h-[90vw] absolute">
       <AnimatedBall />
 
       <motion.div

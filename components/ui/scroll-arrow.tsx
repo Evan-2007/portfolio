@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ScrollArrow() {
   return (
     <div className="absolute flex items-center justify-center">
-      <div className="animate-bounce w-6 h-6">
+      <div className="animate-bounce w-6 h-6 flex justify-center">
         <div className="absolute">
           <ChevronDown size={160} strokeWidth={0.5} />
         </div>
