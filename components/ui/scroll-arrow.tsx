@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion";
+import styles from "@/styles/animations.module.css";
 
 export default function ScrollArrow() {
   return (
@@ -9,14 +10,9 @@ export default function ScrollArrow() {
         <div className="absolute">
           <ChevronDown size={160} strokeWidth={0.5} />
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: [0.5, 0], y: [0, -30] }}
-          transition={{ duration: 1, repeat: Infinity, repeatDelay: 0 }}
-          className="absolute"
-        >
+        <div className={styles.fade}>
           <ChevronDown size={160} strokeWidth={0.5} />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
