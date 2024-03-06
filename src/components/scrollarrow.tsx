@@ -8,10 +8,10 @@ export default function ScrollArrow() {
     <div className="absolute flex items-center justify-center">
       <div className="animate-bounce w-6 h-6 flex justify-center">
         <div className="absolute">
-          <ChevronDown size={160} strokeWidth={0.5} color="white"/>
+          <ChevronDown size={160} strokeWidth={0.5} color="white" />
         </div>
         <div className={styles.fade}>
-          <ChevronDown size={160} strokeWidth={0.5} color="white" />  
+          <ChevronDown size={160} strokeWidth={0.5} color="white" />
         </div>
       </div>
     </div>
