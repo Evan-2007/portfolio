@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Title from '../components/title';
+import PageSplit from '../components/pagesplit';
+import Skills from '../components/skills';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="h-max">
+		<Title client:load></Title>
+	</div>
+	<div class="">
+		<Skills client:load></Skills>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		text-align: center;
+	}
+</style>
