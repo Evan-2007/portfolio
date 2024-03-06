@@ -34,8 +34,14 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: black;
 		background-size: 224px;
+		z-index: 1;
+	}
+	@media (prefers-color-scheme: dark) {
+		html {
+			background: black;
+		}
 	}
 	code {
 		font-family:
