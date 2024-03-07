@@ -12,7 +12,7 @@ import { Languages } from "lucide-react";
 
 export default function Card() {
   return (
-    <div className="flex flex-row flex-wrap mr-10 ml-10 mt-10 mb-10 justify-center items-start">
+    <div className="flex flex-row flex-wrap mr-10 ml-10 mt-20 mb-10 justify-center items-start">
       <CardContainer className="inter-var">
         <CardItem>
           <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl pt-5 pb-5 dark:hover:shadow-emerald-500/[0.1]  dark:bg-black dark:border-white/[0.2] border-black/[0.1] flex justify-center flex-col align-middle text-center mr-3 ml-3 mb-6 items-center h-auto rounded-xl border  ">

@@ -11,6 +11,7 @@ export default function Skills() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.1 }} // Adjust the duration as needed
       >
+        <div className="text-center text-6xl mt-12 underline md:text-8xl md:text-left md:ml-6 text-gray-300 mb-10 font-mono">My Skills:</div>
         <Card />
       </motion.div>
     </div>
