@@ -12,7 +12,7 @@ import { Languages } from "lucide-react";
 
 export default function Card() {
   return (
-    <div className="flex flex-row flex-wrap mr-10 ml-10 mt-10 mb-10 justify-center items-start md:mt-10 lg:mt-20">
+    <div className="flex flex-row flex-wrap mr-2 ml-2 md:mr-10 md:ml-10 mt-10 mb-10 justify-center items-start md:mt-10 lg:mt-10 ">
       <CardContent img={TypeScript.src} title="TypeScript" />
       <CardContent img={JavaScript.src} title="JavaScript" />
       <CardContent img={Next.src} title="Next.js" />
@@ -38,7 +38,7 @@ import railway from "../assets/railway.svg";
 export function Other() {
   return (
 
-    <div className="flex flex-row flex-wrap mr-10 ml-10 mt-10 mb-10 justify-center items-start md:mt-10 lg:mt-10">
+    <div className="flex flex-row flex-wrap mr-2 ml-2 md:mr-10 md:ml-10 mt-10 mb-10 justify-center items-start md:mt-10 lg:mt-10 ">
       <CardContent img={linux.src} title="Linux" />
       <CardContent img={git.src} title="Git" />
       <CardContent img={tailwind.src} title="Tailwind" />
