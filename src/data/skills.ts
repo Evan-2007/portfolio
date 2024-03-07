@@ -1,12 +1,15 @@
 export const languages = [
   {
     name: "JavaScript",
+    description: "",
   },
   {
     name: "TypeScript",
+    description: "",
   },
   {
     name: "Next.js",
+    description: "",
   },
   {
     name: "Astro",

@@ -6,12 +6,12 @@ import styles from "../styles/react/gradient.module.css";
 
 export default function Title() {
   return (
-    <div className="w-full">
+    <div className="w-full h-[100vh]">
       <div
         className={`${styles.gradiant} w-full h-96 absolute ml-0 mr-0`}
       ></div>
 
-      <div className="w-full h-[100vh] ">
+      <div className="w-full  absolute">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
