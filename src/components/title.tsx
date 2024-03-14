@@ -3,13 +3,12 @@ import ScrollArrow from "./scrollarrow";
 import { Gradiant } from "./gradiant-ball";
 import React from "react";
 import styles from "../styles/react/gradient.module.css";
+import Spline from '@splinetool/react-spline';
 
 export default function Title() {
   return (
     <div className="w-full h-[100vh]">
-      <div
-        className={`${styles.gradiant} w-full h-96 absolute ml-0 mr-0`}
-      ></div>
+
 
       <div className="w-full  absolute">
         <motion.div
@@ -18,7 +17,7 @@ export default function Title() {
           transition={{ duration: 2, delay: 0.1 }} // Adjust the duration as needed
           className="absolute "
         >
-          <div className="flex flex-col items-center justify-center h-[70vh] text-center ">
+          <div className="flex flex-col items-center justify-center h-[70vh] text-center mb-24 ">
             <div className="text-7xl font-bold text-gray-800 dark:text-white z-20 text-center">
               Evan Cooper
             </div>
@@ -34,7 +33,9 @@ export default function Title() {
           </div>
         </motion.div>
       </div>
-      <div className="absolute"></div>
+        <div className="w-screen m-0 p-0 flex items-end align-bottom h-screen">
+        <Spline scene="https://prod.spline.design/2iiGAFh2WIYq0Bfs/scene.splinecode" className="w-screen h-screen"/>
+        </div>
     </div>
   );
 }
