@@ -3,14 +3,40 @@ import Layout from '../layouts/Layout.astro';
 import Title from '../components/title';
 import PageSplit from '../components/pagesplit';
 import Skills from '../components/skills';
+import '@/styles/globals.css'
+import {motion} from 'framer-motion';
+import { Menu } from '../components/menu';
+import Projects from '../components/projects';
 ---
+<script is:inline>
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+ 
+	if (typeof localStorage !== 'undefined') {
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+
 
 <Layout title="Welcome to Astro.">
 	<div class="h-max">
 		<Title client:load></Title>
 	</div>
-	<div class="">
-		<Skills client:load></Skills>
+	<div class="h-max">
+			<Skills client:load></Skills>
+	</div>
+	<div class="h-max">
+		<Projects client:load></Projects>
 	</div>
 </Layout>
 
