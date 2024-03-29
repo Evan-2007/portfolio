@@ -42,7 +42,7 @@
 .gradiant {
     opacity: 0.3;
     background: rgb(9,9,11);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 0%, rgba(9, 66, 223, 0.212) 60%, rgb(0, 81, 255) 100%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 10%, rgba(8, 39, 124, 0.212) 60%, rgb(0, 9, 27) 100%);
 
     margin-top: -15px;
 

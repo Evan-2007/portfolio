@@ -1,0 +1,16 @@
+@keyframes onLoad{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.particals {
+    animation: onLoad 1s ease-in-out;
+}
+
