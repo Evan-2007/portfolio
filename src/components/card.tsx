@@ -1,4 +1,5 @@
-import { CardContainer, CardItem, CardBody } from "./3d-card";
+
+import { Card as CardContainer, CardContent as CardBody } from "../components/ui/card";
 import { languages } from "../data/skills";
 
 //import svg
@@ -33,6 +34,7 @@ import cloudflare from "../assets/cloudflare.svg";
 import digitalOcean from "../assets/digitalOcean.svg";
 import vercel from "../assets/vercel.svg";
 import railway from "../assets/railway.svg";
+import { motion } from "framer-motion";
 
 
 export function Other() {
@@ -54,9 +56,17 @@ export function Other() {
 
 function CardContent(props: { img: string; title: string }) {
   return (
-    <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl pt-5 pb-5 dark:hover:shadow-emerald-500/[0.1]  dark:bg-black dark:border-white/[0.2] border-black/[0.1] flex justify-center flex-col align-middle text-center mr-3 ml-3 mb-6 items-center h-auto rounded-xl border  ">
-      <img src={props.img} alt="" className="h-20 w-20" />
-      <h1 className="lg:text-4xl lg:w-[240px] md:w-[140px] sm:w-[150px] text-xl w-[120px] mt-6 font-bold text-white">{props.title}</h1>
-    </CardBody>
+      <div
+      className="w-fit h-fit z-40"
+      >
+      <CardContainer  className="pt-5 pb-5 flex justify-center flex-col align-middle text-center mr-3 ml-3 mb-6 items-center rounded-xl z-30">
+        <CardBody className="flex flex-col justify-center text-center align-middle items-center z-30">
+          <img src={props.img} alt="" className="h-20 w-20 z-30" />
+          <h1 className="lg:text-4xl lg:w-[240px] md:w-[140px] sm:w-[150px] text-xl w-[120px] mt-6 font-bold text-white z-30">{props.title}</h1>
+        </CardBody>
+      </CardContainer>
+      </div>
   );
 }
+
+//bg-gray-50 relative group/card  dark:hover:shadow-2xl pt-5 pb-5 dark:hover:shadow-emerald-500/[0.1]  dark:bg-black dark:border-white/[0.2] border-black/[0.1] flex justify-center flex-col align-middle text-center mr-3 ml-3 mb-6 items-center h-auto rounded-xl border 
