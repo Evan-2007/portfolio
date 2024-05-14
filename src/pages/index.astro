@@ -7,8 +7,77 @@ import '@/styles/globals.css'
 import {motion} from 'framer-motion';
 import { Menu } from '../components/menu';
 import Projects from '../components/projects';
+
+import Particles from "astro-particles"
+import type { ISourceOptions } from "tsparticles-engine";
+
+const options: ISourceOptions = {
+    fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 150,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 3,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 150,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+        background: {
+            color: "#000000",
+        },
+    };
 ---
-<script is:inline>
+<script>
 	const getThemePreference = () => {
 		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 			return localStorage.getItem('theme');
@@ -25,19 +94,61 @@ import Projects from '../components/projects';
 		});
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
+
+
+	import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+    import { loadFull } from "tsparticles";
+
+    // the function name is the parameter passed to the init attribute
+    // required
+    // add the function to window is mandatory, it will be searched there
+
+    window.particlesInit = async function (engine: Engine) {
+        await loadFull(engine);
+    }
+    
+    // the function name is the parameter passed to the loaded attribute
+    // optional
+    // add the function to window is mandatory, it will be searched there
+    window.particlesLoaded = function (container: Container) {
+        console.log("particlesLoaded callback");
+    }
+
+
+
+	setTimeout(() => {
+		const element = document.querySelector('.skills') as HTMLElement;
+
+		let elementheight = 0;
+		if (element) {
+		const height = element.offsetHeight; // Now TypeScript knows element is an HTMLElement
+		console.log(height);
+		elementheight = height
+		} else {
+			console.log('Element not found!');
+		}
+
+		const element2 = document.querySelector('.projects') as HTMLElement;
+		element2.style.marginTop = `${elementheight + 300}px `;
+	}, 1000);
+
 </script>
 
 
 <Layout title="Welcome to Astro.">
-	<div class="h-max">
+	<div class="absolute">
+		<Particles id="tsparticles" options={options} init="particlesInit" />
+	</div>
+	<div class="h-max z-30">
 		<Title client:load></Title>
 	</div>
-	<div class="h-max">
+	<div class="h-max z-50">
 			<Skills client:load></Skills>
 	</div>
-	<div class="h-max">
+	<div class="h-max z-10 projects">
 		<Projects client:load></Projects>
 	</div>
+
 </Layout>
 
 <style>

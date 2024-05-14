@@ -7,12 +7,12 @@ import ParticlesBackground from "./ui/particals";
 
 export default function Title() {
   return (
-    <div className="w-full h-[100vh]">
+    <div className="w-full h-[100vh] skills">
 
-      <div className="w-screen h-screen z-5 absolute">
-        <ParticlesBackground />
+      <div className="w-screen h-screen z-10 absolute">
+
         </div>
-      <div className="w-full  absolute">
+      <div className="w-full  absolute z-20">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

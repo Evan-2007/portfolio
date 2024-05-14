@@ -26,17 +26,19 @@ export default function Skills() {
   }, [controls]);
 
   return (
-    <div className="w-screen h-fit bg-gray-950 flex justify-center z-20">
+    <div className="w-screen h-fit bg-gray-950 flex justify-center z-30 absolute bg-opacity-70" class="skills">
       <motion.div
-        initial={{ opacity: 1 }}
+        initial={{ opacity: 1, }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }} // Add this line
         transition={{ duration: 2, delay: 0.1 }}
       >
-        <div className="text-center text-5xl mt-12 md:text-8xl text-gray-300 mb-10 font-rubik">My Skills:</div>
-        <div className="text-2xl mt-8 md:text-3xl lg:text-4xl text-left ml-9 text-gray-300 font-rubik">Languages/Frameworks:</div>
-        <Card />
-        <div className="text-2xl mt-20 md:text-3xl lg:text-4xl text-left ml-9 text-gray-300 mb-10 font-rubik">Other:</div>
+        <div className="z-50">
+          <div className="text-center text-5xl mt-12 md:text-8xl text-gray-300 mb-10 font-rubik z-50">My Skills:</div>
+          <div className="text-2xl mt-8 md:text-3xl lg:text-4xl text-left ml-9 text-gray-300 font-rubik">Languages/Frameworks:</div>
+          <Card />
+          <div className="text-2xl mt-20 md:text-3xl lg:text-4xl text-left ml-9 text-gray-300 mb-10 font-rubik">Other:</div>
+        </div>
         <Other />
       </motion.div>
     </div>
