@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  side: 'https://evanc.dev',
+  site: 'https://evanc.dev',
   integrations: [tailwind({
     applyBaseStyles: true
   }), react(), robotsTxt({
