@@ -3,6 +3,7 @@ import { TextFill } from '@/components/ui/text-fill'
 import React, { useState, useEffect } from 'react';
 import { Background } from '@/components/ui/background';
 import { SkillsBento } from '@/components/ui/bento/skills';
+import Menu from '@/components/ui/menu';
 
 const name = [
   { value: "Evan", start: 0.5, end: 1, whitespace: true },
@@ -40,7 +41,8 @@ export default function HomePage() {
   return (
     <div className="h-full bg-slate-950 relative">
       <Background />
-      <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden">
+      <Menu />
+      <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden" id="about">
           <main className='justify-center h-screen w-screen flex items-center'>
             <div className="">
                 <TextFill words={name} />
@@ -51,7 +53,7 @@ export default function HomePage() {
             <BentoLayout />
             <SkillsBento />
           </main>
-          <main className='justify-center h-screen w-full flex z-10 items-center flex-col'>
+          <main className='justify-center h-screen w-full flex z-10 items-center flex-col' id="projects">
             <div className="text-white">
               Hello, welcome to my portfolio! This site is still a work in progress
             </div>
