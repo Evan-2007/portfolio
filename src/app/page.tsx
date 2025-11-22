@@ -42,8 +42,8 @@ export default function HomePage() {
     <div className="h-full bg-slate-950 relative">
       <Background />
       <Menu />
-      <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden" id="about">
-          <main className='justify-center h-screen w-screen flex items-center'>
+      <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden " id="about">
+          <main className='justify-center h-screen w-screen flex items-center flex-col md:flex-row'>
             <div className="">
                 <TextFill words={name} />
                 <div className='text-sm'>
