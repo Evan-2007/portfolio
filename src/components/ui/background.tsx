@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { ArrowDown } from 'lucide-react';
 
 export const Background = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -45,6 +46,13 @@ export const Background = () => {
         className="absolute inset-0 w-full h-full"
         style={backgroundStyle}
       />
+      <div 
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 transition-opacity duration-300"
+        style={{ opacity: Math.max(0, 1 - scrollProgress * 4) }}
+       >
+        <span className="text-xs uppercase tracking-widest">My Projects</span>
+          <ArrowDown className="w-5 h-5 animate-bounce" />
+      </div>
       
       {/* <div 
         className="absolute inset-0 opacity-[0.04] mix-blend-overlay" 
