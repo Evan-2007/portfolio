@@ -23,7 +23,7 @@ export function SkillsBento() {
                 <div className="grid grid-cols-2 gap-4">
                     {skills.map((skill) => (
                         <Link key={skill.title} className="flex items-center space-x-3 bg-white/5 hover:bg-white/10 transition-colors duration-200 rounded-lg p-4" href={skill.link} target="_blank">
-                            <Image src={skill.pathToSvg} alt={skill.title} className="w-8 h-8 object-contain" width={32} height={32} />  
+                            <Image src={skill.pathToSvg} alt={skill.title + 'icon'} className="w-8 h-8 object-contain" width={32} height={32} />  
                             <span className="text-white">{skill.title}</span>
                         </Link>
                     ))}
