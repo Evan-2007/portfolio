@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const skills = [
     { title: "JavaScript/TypeScript", pathToSvg: "/typescript.svg", link: "https://www.typescriptlang.org/" },
-    { title: "React/Next.js", pathToSvg: "/nextjs-skill.svg", link: "https://nextjs.org/" },
+    { title: "React/Next.js", pathToSvg: "/nextjs.svg", link: "https://nextjs.org/" },
     { title: "Node.js", pathToSvg: "/node.svg", link: "https://nodejs.org/" },
     { title: "Tailwind CSS", pathToSvg: "/tailwind.svg", link: "https://tailwindcss.com/" },
     { title: "Git", pathToSvg: "/git.svg", link: "https://git-scm.com/" },
