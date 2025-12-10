@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { Background } from '@/components/ui/background';
 import { SkillsBento } from '@/components/ui/bento/skills';
 import Menu from '@/components/ui/menu';
+import {ProfilePicture} from '@/components/profile-image';
+import {About} from '@/components/about';
 
 const name = [
   { value: "Evan", start: 0.5, end: 1, whitespace: true },
@@ -43,19 +45,23 @@ export default function HomePage() {
       <Background />
       <Menu />
       <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden " id="about">
-          <main className='justify-center h-screen w-screen flex items-center flex-col md:flex-row'>
-            <div className="">
-                <TextFill words={name} />
-                <div className='text-sm'>
-                  <TextFill words={description} />
-                </div>
+          <main className='md:h-[60vh] h-[80vh] flex items-center flex-col md:flex-row z-10 max-md:justify-center'>
+            <div className='flex md:flex-row flex-col md:items-center'>
+              <div className='w-[50vw] md:justify-center md:flex md:items-center'>
+                <ProfilePicture />
+              </div>
+              <div className='mr-10 '>
+                <About />
+              </div>
             </div>
-            <BentoLayout />
-            <SkillsBento />
+          </main>
+          <main className='h-[40vh]'>
+
           </main>
           <main className='justify-center h-screen w-full flex z-10 items-center flex-col' id="projects">
+            <SkillsBento />
             <div className="text-white">
-              Hello, welcome to my portfolio! This site is still a work in progress
+              Welcome to my portfolio! This site is still a work in progress
             </div>
             <div className='h-1/2'>
             </div>
