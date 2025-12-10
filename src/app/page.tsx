@@ -6,6 +6,7 @@ import { SkillsBento } from '@/components/ui/bento/skills';
 import Menu from '@/components/ui/menu';
 import {ProfilePicture} from '@/components/profile-image';
 import {About} from '@/components/about';
+import InteractivePlusGrid from '@/components/ui/background-plus';
 
 const name = [
   { value: "Evan", start: 0.5, end: 1, whitespace: true },
@@ -45,15 +46,17 @@ export default function HomePage() {
       <Background />
       <Menu />
       <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden " id="about">
-          <main className='md:h-[60vh] h-[80vh] flex items-center flex-col md:flex-row z-10 max-md:justify-center'>
-            <div className='flex md:flex-row flex-col md:items-center'>
-              <div className='w-[50vw] md:justify-center md:flex md:items-center'>
-                <ProfilePicture />
+          <main className='md:h-[80vh] h-[80vh] flex items-center flex-col md:flex-row z-10 max-md:justify-center relative'>
+            <InteractivePlusGrid>
+              <div className='flex md:flex-row flex-col md:items-center z-15'>
+                <div className='w-[50vw] md:justify-center md:flex md:items-center'>
+                  <ProfilePicture />
+                </div>
+                <div className='mr-10 '>
+                  <About />
+                </div>
               </div>
-              <div className='mr-10 '>
-                <About />
-              </div>
-            </div>
+            </InteractivePlusGrid>
           </main>
           <main className='h-[40vh]'>
 
