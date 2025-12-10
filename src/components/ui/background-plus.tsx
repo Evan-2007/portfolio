@@ -68,7 +68,7 @@ export default function InteractivePlusGrid({
     return (
         <div
             ref={containerRef}
-            className=""
+            className="z-15"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
@@ -123,7 +123,7 @@ export default function InteractivePlusGrid({
                     );
                 })}
             </svg>
-            <div className="relative z-10">{children}</div>
+            <div className="relative z-15">{children}</div>
         </div>
     );
 }

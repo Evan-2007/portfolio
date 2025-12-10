@@ -44,10 +44,11 @@ export default function HomePage() {
   return (
     <div className="h-full bg-slate-950 relative">
       <Background />
-      <Menu />
+
       <div className="z-10 flex flex-col min-h-screen max-w-screen overflow-hidden " id="about">
-          <main className='md:h-[80vh] h-[80vh] flex items-center flex-col md:flex-row z-10 max-md:justify-center relative'>
+          <main className='md:h-[80vh] h-[80vh] flex items-center flex-col md:flex-row z-15 max-md:justify-center relative'>
             <InteractivePlusGrid>
+              <Menu />
               <div className='flex md:flex-row flex-col md:items-center z-15'>
                 <div className='w-[50vw] md:justify-center md:flex md:items-center'>
                   <ProfilePicture />
