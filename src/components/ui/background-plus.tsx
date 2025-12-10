@@ -9,7 +9,7 @@ export default function InteractivePlusGrid({
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const spacing = 70;
+    const spacing = 80;
     const influenceRadius = 150;
     const plusSize = 32;
     const plusStrokeWidth = 6;
