@@ -19,7 +19,7 @@ export default function Menu() {
       
 
     return (
-        <div className="fixed top-0 left-0 w-full p-4 flex justify-center z-20" style={{backdropFilter: "blur(10px) saturate(180%)", backgroundColor: 'rgba(2, 2, 5, 0.6)' }}>
+        <div className="fixed top-0 left-0 w-full p-4 flex justify-center z-20" style={{backdropFilter: `blur(${scrollProgress > 0 ? 10 : 0}px) saturate(180%)` , backgroundColor: scrollProgress > 0 ? 'rgba(2, 2, 5, 0.6)' : 'transparent', transition: 'background-color 0.3s ease, backdrop-filter 0.3s ease'}}>
             <nav>
                 <ul className="flex space-x-6">
                     <Item title="About" href="#about" />
