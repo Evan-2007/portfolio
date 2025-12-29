@@ -3,6 +3,7 @@ import { TextFill } from '@/components/ui/text-fill'
 import React, { useState, useEffect } from 'react';
 import { Background } from '@/components/ui/background';
 import { SkillsBento } from '@/components/ui/bento/skills';
+import { Activity } from '@/components/ui/bento/game-status';
 import Menu from '@/components/ui/menu';
 import {ProfilePicture} from '@/components/profile-image';
 import {About} from '@/components/about';
@@ -63,6 +64,7 @@ export default function HomePage() {
 
           </main>
           <main className='justify-center h-screen w-full flex z-10 items-center flex-col' id="projects">
+            <Activity />
             <SkillsBento />
             <div className="text-white">
               Welcome to my portfolio! This site is still a work in progress
