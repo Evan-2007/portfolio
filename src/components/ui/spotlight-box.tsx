@@ -33,7 +33,7 @@ export function SpotlightBox({
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={cn("relative overflow-hidden rounded-xl border bg-card p-6 transition-colors", className)}
+      className={cn("relative overflow-visible rounded-xl border bg-card p-6 transition-colors", className)}
       {...props}
     >
       {/* effect */}
