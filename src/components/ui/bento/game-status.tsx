@@ -190,7 +190,7 @@ export function Activity() {
 
   useEffect(() => {
     async function fetchActivity() {
-        const websocket = new WebSocket('ws://status-server-production.up.railway.app/ws');
+        const websocket = new WebSocket('wss://status-server-production.up.railway.app/ws');
         websocket.onopen = () => {
             console.log('WebSocket connection established');
         };
